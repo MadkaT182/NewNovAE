@@ -1,0 +1,20 @@
+return Def.ActorFrame{
+	LoadActor("Choice1")..{
+		OnCommand=cmd(x,SCREEN_RIGHT-80;y,SCREEN_CENTER_Y+10);
+	};
+	LoadActor("Choice2")..{
+		OnCommand=cmd(x,SCREEN_RIGHT-80;y,SCREEN_CENTER_Y+40);
+	};
+	LoadActor("Choice3")..{
+		OnCommand=cmd(x,SCREEN_RIGHT-80;y,SCREEN_CENTER_Y+70);
+	};
+	LoadActor("Choice4")..{
+		OnCommand=cmd(x,SCREEN_RIGHT-80;y,SCREEN_CENTER_Y+100);
+	};
+	LoadActor("Choice5")..{
+		OnCommand=cmd(x,SCREEN_RIGHT-80;y,SCREEN_CENTER_Y+130);
+	};
+	LoadActor("Choice6")..{
+		OnCommand=cmd(x,SCREEN_RIGHT-80;y,SCREEN_CENTER_Y+160);
+	};
+}

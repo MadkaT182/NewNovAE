@@ -1,0 +1,41 @@
+return Def.ActorFrame{
+	Def.Quad{
+		OnCommand=cmd(zoom,0;sleep,1);
+	};
+	LoadActor("../_bgmain")..{
+		OnCommand=cmd(Center;zoomtowidth,SCREEN_WIDTH*2);
+	};
+	LoadActor(THEME:GetPathG("_shared","footer"))..{
+		OnCommand=cmd(y,SCREEN_BOTTOM-20);
+	};
+	LoadActor("../_doorright")..{
+		OnCommand=cmd(x,SCREEN_RIGHT+362;horizalign,left;y,SCREEN_CENTER_Y;linear,0.2;x,SCREEN_CENTER_X-45);
+		Condition=not IsUsingWideScreen()
+	};
+	LoadActor("../_doorleft")..{
+		OnCommand=cmd(x,SCREEN_LEFT-362;horizalign,right;y,SCREEN_CENTER_Y;linear,0.2;x,SCREEN_CENTER_X+20);
+		Condition=not IsUsingWideScreen()
+	};
+	LoadActor("../_doorright")..{
+		OnCommand=cmd(zoomx,1.4;x,SCREEN_RIGHT+362;horizalign,left;y,SCREEN_CENTER_Y;linear,0.2;x,SCREEN_CENTER_X-45);
+		Condition=IsUsingWideScreen()
+	};
+	LoadActor("../_doorleft")..{
+		OnCommand=cmd(zoomx,1.4;x,SCREEN_LEFT-362;horizalign,right;y,SCREEN_CENTER_Y;linear,0.2;x,SCREEN_CENTER_X+45);
+		Condition=IsUsingWideScreen()
+	};
+	LoadActor("../_yourchoice")..{
+		OnCommand=cmd(y,SCREEN_CENTER_Y-285;sleep,0.5;linear,0.15;addy,90);
+	};
+	LoadActor("../_bannerframe")..{
+		OnCommand=cmd(x,SCREEN_CENTER_X;y,SCREEN_CENTER_Y-110;zoomy,0;sleep,0.5;linear,0.15;zoomy,1);
+	};
+	LoadActor("songbanner")..{
+		OnCommand=cmd(x,SCREEN_CENTER_X;y,SCREEN_CENTER_Y-113;zoomy,0;sleep,0.5;linear,0.15;zoomy,1);
+	};
+	LoadActor("StageDisplay")..{
+		OnCommand=cmd(x,SCREEN_CENTER_X;y,SCREEN_CENTER_Y+10;zoomy,0;zoomx,2;sleep,0.1;bounceend,0.2;zoom,1;);
+	};
+	LoadActor("SoundStage");
+	LoadActor("Best");
+}
